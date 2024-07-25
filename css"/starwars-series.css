@@ -1,0 +1,21 @@
+body {
+  background-image: url("/img/star.jfif");
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  color: #ffde06;
+  margin-top: -20px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #ffde06;
+  font-size: large;
+  margin-right: 5px;
+}
+
+.serie {
+  margin-top: 10px;
+}

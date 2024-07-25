@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+
+  margin-top: 40px;
+
+  background-image: url("/img/star.jfif");
+}
+
+header {
+  margin-top: -30px;
+}
+
+h1 {
+  color: #ffde06;
+  margin-top: -20px;
+}
+
+ul {
+  margin-right: 50px;
+  font-size: larger;
+}
+
+li {
+  color: #ffde06;
+}

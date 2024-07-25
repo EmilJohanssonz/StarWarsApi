@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+
+  margin-top: 40px;
+
+  background-image: url("/img/star.jfif");
+}
+
+header {
+  color: #feda4a;
+}
+
+#prev {
+  position: fixed;
+
+  margin-top: -700px;
+
+  margin-left: -310px;
+
+  background-color: #feda4a;
+}
+
+#next {
+  position: fixed;
+
+  margin-top: -700px;
+
+  margin-left: 250px;
+
+  background-color: #feda4a;
+}
+
+div {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: large;
+
+  color: #feda4a;
+
+  margin-top: 10px;
+}

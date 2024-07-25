@@ -1,0 +1,40 @@
+body {
+  background-image: url("/img/star.jfif");
+
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1 {
+  color: #ffde06;
+  margin-top: -20px;
+}
+
+button {
+  margin-top: 30px;
+  font-size: large;
+  background-color: #ffde06;
+  margin-left: 0px;
+}
+
+.bilder {
+  margin-right: -5px;
+  margin-top: 20px;
+}
+
+.peo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.peoCha {
+  margin-top: 5px;
+}
+ul {
+  max-width: fit-content;
+  margin-left: 510px;
+  margin-top: 25px;
+}
+li {
+  color: #ffde06;
+}
