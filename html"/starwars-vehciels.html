@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Star Wars - Vehciles</title>
+
+    <style>
+      body {
+        text-align: center;
+
+        margin-top: 40px;
+
+        background-image: url("/img/star.jfif");
+      }
+
+      header {
+        color: #feda4a;
+        margin-top: -50px;
+      }
+
+      #prev {
+        position: fixed;
+
+        margin-top: -800px;
+
+        margin-left: -310px;
+
+        background-color: #feda4a;
+      }
+
+      #next {
+        position: fixed;
+
+        margin-top: -800px;
+
+        margin-left: 250px;
+
+        background-color: #feda4a;
+      }
+
+      div {
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: large;
+
+        color: #feda4a;
+
+        margin-top: 10px;
+      }
+    </style>
+    >
+  </head>
+
+  <body>
+    <header>
+      <img src="/img/starwarsemlem-removebg-preview.png" />
+      <h1>Star Wars Vehciels</h1>
+    </header>
+
+    <div id="content"></div>
+
+    <button id="prev" onclick="loadPreviousPage()">Previous</button>
+
+    <button id="next" onclick="loadNextPage()">Next</button>
+
+    <script src="/script/starwars-vehciels.js"></script>
+  </body>
+</html>
