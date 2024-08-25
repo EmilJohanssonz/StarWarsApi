@@ -1,3 +1,10 @@
+*The trick is to imagine a three-dimensional 
+space where the text crawls vertical up the Y-axis and out along the Z-axis.
+This gives the impression the text is both slide up the screen and away from the viewer at the same time.*/
+/*First, let’s set up the document <body> so that the screen is not scrollable.
+ We want the text to come up from the bottom of the screen without the viewer being able to scroll and see the text before it enters.
+  We can use overflow:
+/*My body*/
 .ani {
   width: 100%;
 
@@ -23,12 +30,14 @@
 }
 
 .star-wars {
+  /* Flexbox to center the entire element on the screen */
   display: flex;
-
+/* This is a magic number based on the context in which this snippet is used and effects the perspective */
   justify-content: center;
 
   position: relative;
-
+/* This sets allows us to transform the text on a 3D plane, and is somewhat a magic number */
+  /* The rest is totally up to personal styling preferences */
   height: 800px;
 
   color: #feda4a;
@@ -51,12 +60,14 @@ h2 {
   color: blue;
 }
 .crawl {
+  /* Position the element so we can adjust the top property in the animation */
+  * Making sure the text is fully off the screen at the start and end of the animation */
   position: relative;
-
+  /* Defines the skew origin at the very center when we apply transforms on the animation */
   top: 99999px;
 
   transform-origin: 50% 100%;
-
+/*will play the animation for 1 minute.*/
   animation: crawl 60s linear;
 }
 
@@ -71,17 +82,18 @@ h2 {
 
   text-transform: uppercase;
 }
-
+/* We're calling this animation "crawl" */
 @keyframes crawl {
   0% {
+    * The element starts below the screen */
     top: -100px;
-
+ /* Rotate the text 20 degrees but keep it close to the viewer */
     transform: rotateX(20deg) translateZ(0);
   }
-
+/*  using a big one to make sure the text is fully off the screen at the end */
   100% {
     top: -6000px;
-
+/* Slightly increasing the rotation at the end and moving the text far away from the viewer */
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
