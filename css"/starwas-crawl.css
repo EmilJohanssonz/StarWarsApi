@@ -1,99 +1,96 @@
-/*The trick is to imagine a three-dimensional space where the text crawls vertical up the Y-axis and out along the Z-axis.
-This gives the impression the text is both slide up the screen and away from the viewer at the same time.
-First, let’s set up the document <body> so that the screen is not scrollable.
+/*The trick is to imagine a three-dimensional 
+space where the text crawls vertical up the Y-axis and out along the Z-axis.
+This gives the impression the text is both slide up the screen and away from the viewer at the same time.*/
+/*First, let’s set up the document <body> so that the screen is not scrollable.
  We want the text to come up from the bottom of the screen without the viewer being able to scroll and see the text before it enters.
-  We can use overflow:
-/*My body is called ani */
+  We can use overflow: hidden to do that:*/
 .ani {
-  width: 100%;
+  width: 100%; /*full width*/
 
-  height: 100%;
+  height: 100%; /*full height*/
 
-  background: #000;
+  background: #000; /*black background*/
 
-  overflow: hidden;
+  overflow: hidden; /*hidden overflow*/
 }
-/* I am using the fade on this element. because we want the image and text disapear on the page.
-.fade */
-{
-  position: relative;
+/*Now, let’s create the three-dimensional space.*/
+.fade {
+  position: relative; /*relative position*/
 
-  width: 100%;
+  width: 100%; /*full width*/
 
-  min-height: 60vh;
+  min-height: 60vh; /*min height*/
 
-  top: -25px;
+  top: -25px; /*position below the text*/
 
-  background-image: linear-gradient(0deg, transparent, black 75%);
+  background-image: linear-gradient(0deg, transparent, black 75%); /*linear gradient*/
 
-  z-index: 1;
+  z-index: 1; /*z index*/
 }
 
 .star-wars {
-  /* Flexbox to center the entire element on the screen */
-  display: flex;
-/* This number based on the context in which this snippet is used and effects the perspective */
-  justify-content: center;
+  display: flex; /*flexbox*/
 
-  position: relative;
-/* This sets allows us to transform the text on a 3D plane, 
-   The rest is totally up to personal styling preferences */
-  height: 800px;
+  justify-content: center; /*centered*/
 
-  color: #feda4a;
+  position: relative; /*relative position*/
 
-  font-family: "Pathway Gothic One", sans-serif;
+  height: 800px; /*height*/
 
-  font-size: 500%;
+  color: #feda4a; /*text color*/
 
-  font-weight: 600;
+  font-family: "Pathway Gothic One", sans-serif; /*font family*/
 
-  letter-spacing: 6px;
+  font-size: 500%; /*font size*/
 
-  line-height: 150%;
+  font-weight: 600; /*font weight*/
 
-  perspective: 400px;
+  letter-spacing: 6px; /*letter spacing*/
 
-  text-align: justify;
+  line-height: 150%; /*line height*/
+
+  perspective: 400px; /*perspective*/
+
+  text-align: justify; /*justified text*/
 }
+/*Now, let’s create the text.*/
 h2 {
-  color: blue;
+  color: blue; /*text color*/
 }
+
+/*Now, let’s animate the text.*/
 .crawl {
-  /* Position the element so we can adjust the top property in the animation.
-   Making sure the text is fully off the screen at the start and end of the animation */
-  position: relative;
-  /* Defines the skew origin at the very center when we apply transforms on the animation */
-  top: 99999px;
+  position: relative; /*relative position*/
 
-  transform-origin: 50% 100%;
-/*will play the animation for 1 minute.*/
-  animation: crawl 60s linear;
+  top: 99999px; /*position above the text*/
+
+  transform-origin: 50% 100%; /*origin*/
+
+  animation: crawl 60s linear; /*animation*/
 }
-
+/*Now, let’s style the text.*/
 .crawl > .title {
-  font-size: 90%;
+  font-size: 90%; /*font size*/
 
-  text-align: center;
+  text-align: center; /*centered*/
 }
-
+/*Now, let’s animate the text.*/
 .crawl > .title h1 {
-  margin: 0 0 100px;
+  margin: 0 0 100px; /*margin*/
 
-  text-transform: uppercase;
+  text-transform: uppercase; /*uppercase*/
 }
-/* I calling this animation "crawl" */
+/*Now, let’s style the text.*/
 @keyframes crawl {
   0% {
-    /* The element starts below the screen */
-    top: -100px;
- /* Rotate the text 20 degrees but keep it close to the viewer */
-    transform: rotateX(20deg) translateZ(0);
+    top: -100px; /*position above the text*/
+
+    transform: rotateX(20deg) translateZ(0); /*rotation*/
   }
-/*  using a big one to make sure the text is fully off the screen at the end */
-  100% {
-    top: -6000px;
-/* Slightly increasing the rotation at the end and moving the text far away from the viewer */
-    transform: rotateX(25deg) translateZ(-2500px);
+
+  100% { 
+    top: -6000px; /*position above the text*/
+
+    transform: rotateX(25deg) translateZ(-2500px); /*rotation*/
   }
 }
