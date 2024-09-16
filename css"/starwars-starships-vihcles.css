@@ -1,15 +1,13 @@
 body {
-  text-align: center;
-
+  text-align: center; /* Centered */
   margin-top: 40px;
-
-  background-image: url("/img/star.jfif");
+  background-image: url("/img/star.jfif"); /* Star Wars Background */
 }
-
+/* Style the header */
 header {
   color: #feda4a;
 }
-
+/*style prev button*/
 #prev {
   position: fixed;
 
@@ -19,7 +17,7 @@ header {
 
   background-color: #feda4a;
 }
-
+/*style next button*/
 #next {
   position: fixed;
 
@@ -29,7 +27,7 @@ header {
 
   background-color: #feda4a;
 }
-
+/*style div*/
 div {
   font-family: Arial, Helvetica, sans-serif;
 
