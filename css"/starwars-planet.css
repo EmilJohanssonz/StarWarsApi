@@ -1,25 +1,23 @@
 body {
-  text-align: center;
-
-  margin-top: 40px;
-
-  background-image: url("/img/star.jfif");
+  text-align: center; /* Centered */
+  margin-top: 40px; /* Margin Top */
+  background-image: url("/img/star.jfif"); /* Star Wars Background */
 }
-
+/* Style the header */
 header {
   margin-top: -30px;
 }
-
+/* Style the h1 */
 h1 {
   color: #ffde06;
   margin-top: -20px;
 }
-
+/* Style the list */
 ul {
   margin-right: 50px;
   font-size: larger;
 }
-
+/* Style the li */
 li {
   color: #ffde06;
 }
