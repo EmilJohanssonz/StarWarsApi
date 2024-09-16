@@ -1,21 +1,21 @@
 body {
-  background-image: url("/img/star.jfif");
-  background-attachment: fixed;
-  text-align: center;
+  background-image: url("/img/star.jfif"); /* Star Wars Background */
+  background-attachment: fixed; /* Fixed Background */
+  text-align: center; /* Centered */
 }
-
+/*style h1*/
 h1 {
   color: #ffde06;
   margin-top: -20px;
 }
-
+/*style button*/
 button {
   margin-top: 20px;
   background-color: #ffde06;
   font-size: large;
   margin-right: 5px;
 }
-
+/* style series */
 .serie {
-  margin-top: 10px;
+  margin-top: 10px; /* Margin Top */
 }
