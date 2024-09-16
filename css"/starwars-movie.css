@@ -1,22 +1,24 @@
+/* Star Wars Movie */
+/* Style the body of the HTML document */
 body {
   background-image: url("/img/star.jfif");
 
   background-attachment: fixed;
   text-align: center;
 }
-
+/* Style the header */
 h1 {
   color: #ffde06;
   margin-top: -20px;
 }
-
+/* Style the button */
 button {
   margin-top: 30px;
   font-size: large;
   background-color: #ffde06;
   margin-left: 0px;
 }
-
+/* Style the image */
 .bilder {
   margin-right: -5px;
   margin-top: 20px;
@@ -30,11 +32,13 @@ button {
 .peoCha {
   margin-top: 5px;
 }
+/* Style the list */
 ul {
   max-width: fit-content;
   margin-left: 510px;
   margin-top: 25px;
 }
+/* Style the list */
 li {
   color: #ffde06;
 }
