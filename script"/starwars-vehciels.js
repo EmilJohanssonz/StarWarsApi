@@ -1,38 +1,37 @@
+// next and previous page button
 let nextPage = "https://swapi.dev/api/vehicles/";
 
 let prevPage = null;
 
-const contentDiv = document.getElementById("content");
+const contentDiv = document.getElementById("content"); // get the content div
 
 
 
-
+// event listener for next button
 function updateButtons() {
 
-  document.getElementById("prev").disabled = !prevPage;
+  document.getElementById("prev").disabled = !prevPage; // disable the previous button if there is no previous page
 
-  document.getElementById("next").disabled = !nextPage;
+  document.getElementById("next").disabled = !nextPage; // disable the next button if there is no next page
 
 }
 
-
-
-
+// load the page
 function loadPage(url) {
 
-  fetch(url)
+  fetch(url) // fetch the url
 
     .then(response => response.json())
 
-    .then(data => {
+    .then(data => { // parse the response as JSON
 
-      console.log(data);
+      console.log(data); // log the data
 
       contentDiv.innerHTML = ""; // Clear the current content
 
-      data.results.forEach(vehicle => {
+      data.results.forEach(vehicle => { // loop through the data
 
-        const vehicleElement = document.createElement("div");
+        const vehicleElement = document.createElement("div"); // create a new div
 
         vehicleElement.innerHTML = `
 
@@ -48,15 +47,15 @@ function loadPage(url) {
 
                 `;
 
-        contentDiv.appendChild(vehicleElement);
+        contentDiv.appendChild(vehicleElement); // add the data to the div
 
       });
 
-      nextPage = data.next;
+      nextPage = data.next; // update the next page
 
-      prevPage = data.previous;
+      prevPage = data.previous; // update the previous page
 
-      updateButtons();
+      updateButtons(); // update the buttons
 
     })
 
@@ -64,26 +63,25 @@ function loadPage(url) {
 
 }
 
+function loadNextPage() { // load the next page
 
-function loadNextPage() {
+  if (nextPage) { // if there is a next page
 
-  if (nextPage) {
-
-    loadPage(nextPage);
-
-  }
-
-}
-
-function loadPreviousPage() {
-
-  if (prevPage) {
-
-    loadPage(prevPage);
+    loadPage(nextPage); // load the next page
 
   }
 
 }
 
-document.addEventListener("DOMContentLoaded", () => loadPage(nextPage));
+function loadPreviousPage() { // load the previous page
+
+  if (prevPage) { // if there is a previous page
+
+    loadPage(prevPage); // load the previous page
+
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", () => loadPage(nextPage)); // load the first page
 
