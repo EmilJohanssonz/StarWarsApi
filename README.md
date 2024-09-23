@@ -37,11 +37,7 @@ The page is styled with the following key features:
 - **Button Style**: Large, yellow buttons to navigate through different sections.
 - **Text Color**: Yellow text for a Star Wars-like appearance.
 
-## 📬 Contact
 
-For any questions or feedback, you can reach out to me:
-
-- **Email:** [emilaik@gmail.com](mailto:emilaik@gmail.com)
 
 May the Force guide you through your exploration of the Star Wars universe!
 
