@@ -21,13 +21,6 @@ Explore the galaxy by clicking the buttons below:
 
 The page features a Star Wars-themed design with a background image and various Star Wars-related icons. The buttons are styled to match the iconic look of the Star Wars universe.
 
-## 🖼️ Images
-
-The page includes the following images:
-
-- **Star Wars Logo**: ![Star Wars Logo](img/starwarsemlem.png)
-- **Rebel Alliance Symbol**: ![Rebel Alliance](img/rebel.png)
-- **Empire Symbol**: ![Empire](img/empire.png)
 
 ## ⚙️ Style
 
